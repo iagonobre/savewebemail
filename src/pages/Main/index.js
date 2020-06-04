@@ -42,39 +42,40 @@ export default class Main extends Component {
 
     return (
       <>
-        <Page>
+        <Page id="page-home">
           <div>
             <Header>
               <header>
                 <img src={logo} alt="logomarca"></img>
-                <A>
+                <A id="a">
                   <span />
                   <a href="/">Em Breve</a>
                 </A>
               </header>
             </Header>
 
-            <Container>
+            <Container id="content">
               <main>
                 <Slogan>O Assistente Virtual que decola seus estudos!</Slogan>
-                <Paragrafo>
+                <Paragrafo id="par">
                   O SAVE é um universo de funcionalidades, feito exclusivamente para salvar você, estudante do IFRN.
                 </Paragrafo>
-                <Text>
+                <Text id="txt">
                   <MdSchool />  Vinculado ao SUAP. <br />
                   <AiOutlinePaperClip /> Acesse materiais, crie notificações e muito mais.
                 </Text>
-                <Text>Cadastre-se abaixo, e receba um e-mail durante o lançamento.</Text>
+                <Text id="txt2">Cadastre-se abaixo, e receba um e-mail durante o lançamento.</Text>
                 <form schema={schema} autocomplete="off" onSubmit={this.handleSubmit}>
                   <Butao>
                     <input
+                      id="email"
                       name="email"
                       type="email"
                       placeholder="Digite o seu melhor e-mail"
                       value={newEmail}
                       onChange={this.handleInputChange}
                     />
-                    <SubmitButton loading={loading}><BsArrowBarRight /></SubmitButton>
+                    <SubmitButton id="button" loading={loading}><BsArrowBarRight id="svgsubmit" /></SubmitButton>
                     <MdEmail />
                   </Butao>
                 </form>

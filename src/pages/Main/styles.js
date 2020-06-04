@@ -87,11 +87,12 @@ export const SubmitButton = styled.button.attrs(props => ({
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
   justify-content: center;
+  align-items: center;
 
   svg {
     width: 23px;
     height: 23px;
-    margin-right: 10px;
+    margin-top: 5px;
     position: absolute;
     color: #f0f0f5;
   }
@@ -109,11 +110,13 @@ export const Butao = styled.div`
   max-width: 390px; 
   margin-top: 15px;
   position: relative;
+  align-items: center;
+  justify-content: center;
   svg {
     width: 23px;
     height: 23px;
     left: 20px;
-    top: 21px;
+    top: 15px;
     position: absolute;
     color: #f0f0f5;
   }
@@ -128,6 +131,7 @@ export const Butao = styled.div`
     background-color: #AF01AD;
     display: flex;
     align-items: center;
+    justify-content: center;
 
     border-width: 4px;
     border-style: solid;
