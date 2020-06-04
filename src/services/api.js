@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://saveemail.herokuapp.com',
+  baseURL: 'https://saveemail.herokuapp.com',
 });
 
 export default api;
