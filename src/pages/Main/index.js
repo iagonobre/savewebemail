@@ -65,7 +65,7 @@ export default class Main extends Component {
                   <AiOutlinePaperClip /> Acesse materiais, crie notificações e muito mais.
                 </Text>
                 <Text>Cadastre-se abaixo, e receba um e-mail durante o lançamento.</Text>
-                <form schema={schema} onSubmit={this.handleSubmit}>
+                <form schema={schema} autocomplete="off" onSubmit={this.handleSubmit}>
                   <Butao>
                     <input
                       name="email"
