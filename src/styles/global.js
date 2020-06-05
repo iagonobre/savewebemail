@@ -190,6 +190,9 @@ export default createGlobalStyle`
       width: 230px;
       font-size: 14px;
     }
+    #svgsubmit{
+      left: 4px;
+    }
     #content {
       main {
         h1 {
