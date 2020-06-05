@@ -163,7 +163,7 @@ export default createGlobalStyle`
 
   @media (max-width: 443px) {
     #email{
-      width: 300px;
+      width: 250px;
     }
     #content {
       main {
@@ -187,7 +187,8 @@ export default createGlobalStyle`
 
   @media (max-width: 383px) {
     #email{
-      width: 265px;
+      width: 230px;
+      font-size: 14px;
     }
     #content {
       main {
@@ -238,7 +239,7 @@ export default createGlobalStyle`
       background-position-x: 18vw;
     }
     #a {
-      bottom: -50px;
+      display: none;
     }
   }
 
@@ -260,9 +261,6 @@ export default createGlobalStyle`
       height: 120vh;
       background-position-y: 54vh;
     }
-    #a {
-      bottom: -50px;
-    }
   }
 
   @media (max-height: 946px) and (orientation: portrait){
@@ -272,9 +270,6 @@ export default createGlobalStyle`
     #page-home {
       height: 127vh;
       background-position-y: 55vh;
-    }
-    #a {
-      bottom: -200px;
     }
   }
 
@@ -286,9 +281,6 @@ export default createGlobalStyle`
       height: 138vh;
       background-position-y: 61vh;
     }
-    #a {
-      bottom: -280px;
-    }
   }
 
   @media (max-height: 795px) and (orientation: portrait){
@@ -299,18 +291,12 @@ export default createGlobalStyle`
       height: 145vh;
       background-position-y: 61vh;
     }
-    #a {
-      bottom: -280px;
-    }
   }
 
   @media (max-height: 725px) and (orientation: portrait){
     #page-home {
       height: 160vh;
       background-position-y: 67vh;
-    }
-    #a {
-      bottom: -320px;
     }
   }
 
@@ -319,9 +305,6 @@ export default createGlobalStyle`
       height: 175vh;
       background-position-y: 75vh;
     }
-    #a {
-      bottom: -470px;
-    }
   }
 
   @media (max-height: 645px) and (orientation: portrait){
@@ -329,18 +312,12 @@ export default createGlobalStyle`
       height: 188vh;
       background-position-y: 83vh;
     }
-    #a {
-      bottom: -470px;
-    }
   }
 
   @media (max-height: 545px) and (orientation: portrait){
     #page-home {
       height: 217vh;
       background-position-y: 90vh;
-    }
-    #a {
-      bottom: -470px;
     }
   }
 `;
