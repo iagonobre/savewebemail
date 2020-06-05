@@ -4,6 +4,7 @@ import logo from '../../assets/logo.svg';
 import { MdEmail, MdSchool } from 'react-icons/md';
 import { AiOutlinePaperClip } from 'react-icons/ai';
 import { BsArrowBarRight } from 'react-icons/bs';
+import { toast } from 'react-toastify';
 import api from '../../services/api';
 import * as Yup from 'yup';
 
@@ -35,6 +36,8 @@ export default class Main extends Component {
       newEmail: '',
       loading: false,
     })
+
+    toast.success('E-mail enviado com sucesso')
   }
 
   render() {
