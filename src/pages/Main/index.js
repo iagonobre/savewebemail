@@ -48,7 +48,7 @@ export default class Main extends Component {
               <header>
                 <img src={logo} alt="logomarca"></img>
                 <A id="a">
-                  <span />
+                  <span id="embreve" />
                   <a href="/">Em Breve</a>
                 </A>
               </header>
@@ -66,7 +66,7 @@ export default class Main extends Component {
                 </Text>
                 <Text id="txt2">Cadastre-se abaixo, e receba um e-mail durante o lançamento.</Text>
                 <form schema={schema} autocomplete="off" onSubmit={this.handleSubmit}>
-                  <Butao>
+                  <Butao id="butao">
                     <input
                       id="email"
                       name="email"
