@@ -28,6 +28,11 @@ export default class Main extends Component {
 
     const { newEmail } = this.state
 
+    if (newEmail === '') {
+      this.setState({ loading: false })
+      return toast.error('Preencha todos os campos')
+    }
+
     await api.post('/emails', {
       em: newEmail,
     })
