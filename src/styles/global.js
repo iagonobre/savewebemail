@@ -2,6 +2,15 @@ import { createGlobalStyle } from 'styled-components';
 import 'react-toastify/dist/ReactToastify.css';
 
 export default createGlobalStyle`
+
+  .Toastify__toast--success {
+    background: #AF01AD;
+    border-radius: 6px;
+  }
+  .Toastify__toast--error {
+    border-radius: 6px;
+  }
+
   * {
     margin: 0;
     padding: 0;

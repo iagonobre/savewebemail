@@ -16,6 +16,7 @@ export default class Main extends Component {
   state = {
     newEmail: '',
     loading: false,
+    place: 'Digite o seu melhor e-mail'
   };
 
   handleInputChange = e => {
@@ -33,12 +34,18 @@ export default class Main extends Component {
       return toast.error('Preencha todos os campos')
     }
 
+    this.setState({
+      newEmail: '',
+      place: 'Enviando...'
+    })
+
     await api.post('/emails', {
       em: newEmail,
     })
 
     this.setState({
       newEmail: '',
+      place: 'Digite o seu melhor e-mail',
       loading: false,
     })
 
@@ -46,7 +53,7 @@ export default class Main extends Component {
   }
 
   render() {
-    const { newEmail, loading } = this.state;
+    const { newEmail, loading, place } = this.state;
 
     return (
       <>
@@ -79,7 +86,7 @@ export default class Main extends Component {
                       id="email"
                       name="email"
                       type="email"
-                      placeholder="Digite o seu melhor e-mail"
+                      placeholder={place}
                       value={newEmail}
                       onChange={this.handleInputChange}
                     />
