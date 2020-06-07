@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Emails, Text } from './styles';
 
-import api from '../../services/api';
+import { api } from '../../services/api';
 
 export default class Email extends Component {
   state = {

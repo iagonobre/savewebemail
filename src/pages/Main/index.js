@@ -5,7 +5,8 @@ import { MdEmail, MdSchool } from 'react-icons/md';
 import { AiOutlinePaperClip } from 'react-icons/ai';
 import { BsArrowBarRight } from 'react-icons/bs';
 import { toast } from 'react-toastify';
-import api from '../../services/api';
+import { api } from '../../services/api';
+import axios from 'axios';
 import * as Yup from 'yup';
 
 const schema = Yup.object().shape({
@@ -38,6 +39,19 @@ export default class Main extends Component {
       newEmail: '',
       place: 'Enviando...'
     })
+
+    const buff = new Buffer(newEmail);
+    const emailCodificado = buff.toString('base64');
+    const response = await axios.get(`https://optin.safetymails.com/main/safetyRT/00c4b923361423fcdb287dc2ab24fad20f263b85/5d69e8f213d91fbf4f76b76cf252f2b630441052/${emailCodificado}`)
+    const result = response.data.StatusEmail
+    console.log(response)
+    if (result === 'INVALIDO') {
+      this.setState({
+        place: 'Digite o seu melhor e-mail',
+        loading: false
+      })
+      return toast.error('Email inválido ou inexistente')
+    }
 
     await api.post('/emails', {
       em: newEmail,
