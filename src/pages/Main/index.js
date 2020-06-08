@@ -40,11 +40,6 @@ export default class Main extends Component {
       place: 'Enviando...'
     })
 
-    const buff = new Buffer(newEmail);
-    const emailCodificado = buff.toString('base64');
-    const response = await axios.get(`https://optin.safetymails.com/main/safetyoptin/00c4b923361423fcdb287dc2ab24fad20f263b85/5d69e8f213d91fbf4f76b76cf252f2b630441052/${emailCodificado}`)
-    console.log(response)
-
     await api.post('/emails', {
       em: newEmail,
     })
