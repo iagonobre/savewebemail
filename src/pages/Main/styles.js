@@ -11,6 +11,7 @@ export const Page = styled.div`
   height: 100vh;
   background: url(${imageBackground}) no-repeat;
   background-position: 50vw bottom;
+  background-attachment: fixed;
 `
 
 export const Container = styled.main`
